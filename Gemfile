@@ -59,6 +59,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   # Use for testing rails models, controllers
   gem 'rspec-rails'
+  # FFI is a required pre-requisite for Windows or posix_spawn support in the ChildProcess gem.
+  gem 'ffi'
 end
 
 group :development do
