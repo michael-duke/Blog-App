@@ -27,7 +27,7 @@ describe User, type: :model do
   end
 
   it 'has the recent 3 posts after it creates 4 posts' do
-    4.times { |time| Post.create(author: subject, title: "Post #{time + 1}", text: 'This is the test post') }
+    4.times { |time| Post.create(author: subject, title: "Post #{time + 1}", text: 'This is a test post') }
     expect(subject.recent_three.length).to eq 3
 
     recent_post_title = subject.recent_three.first.title
