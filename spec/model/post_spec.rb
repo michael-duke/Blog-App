@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Post, type: :model do
   before :each do
-    @author = User.create(name: 'Andor', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          bio: 'Rebel fighter from Kenari')
+    @author = User.new(name: 'Andor', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                       bio: 'Rebel fighter from Kenari')
     @post = Post.new(author: @author, title: 'Post numero uno', text: 'This is the test post')
   end
 
@@ -55,5 +55,9 @@ describe Post, type: :model do
 
     recent_comment_text = @post.recent_five.first.text
     expect(recent_comment_text).to match 'Test comment numero 10'
+  end
+
+  it 'can not update posts_counter since it\'s a private method' do
+    expect(@post).to_not respond_to(:update_posts_counter)
   end
 end
