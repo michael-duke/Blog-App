@@ -1,2 +1,7 @@
+<% content_for :title, "Blog App" %>
 <h1>Users#index</h1>
-<p>Here is a list of ALL Users, you are in '/' or '/users'</p>
+<section class="users-container">
+  <% @users.each do |user| %>
+    <%= render "user", user: user %>
+  <% end %>
+</section>
