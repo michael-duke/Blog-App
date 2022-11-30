@@ -1,0 +1,1 @@
+Pagy::DEFAULT[:items] = 3  # items per page
