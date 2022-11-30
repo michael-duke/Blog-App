@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogApp</title>
+    <title><%= yield(:title) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+
+    <!-- Load Tailwind Play CDN-->
+    <%= javascript_include_tag 'https://cdn.tailwindcss.com' %>
+    <%= javascript_include_tag 'tailwind.config.js' %>
+
+    <!-- Load Material Tailwind from Creative Tim-->
+    <!-- stylesheet -->
+    <%= stylesheet_link_tag "https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" %>
+    <!-- script -->
+    <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js' %>
 
   <body>
+    <%= link_to 'HOME', root_path, class: 'mr-8' %>
+    <%= link_to 'BACK', 'javascript:history.back()' %>
     <%= yield %>
+    <!-- Ripple effect -->
+    <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js' %>  
   </body>
 </html>
