@@ -1,0 +1,19 @@
+<% content_for :title, "New Post" %>
+<h1>Post#new</h1>
+
+<h1 class="text-xl mt-8">New Post</h1>
+<%= form_with model: @new_post, url: user_posts_path, class: "w-6/12 m-6" do |form|  %>
+  <div class="input-group input-group-outline mb-4">
+    <label class="form-label">Post title</label>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-outline mb-6 bg-blue-gray-50">
+    <label class="form-label">Your Post text</label>
+    <%= form.text_area :text, class: "form-control", rows: "7" %>
+  </div>
+
+  <div>
+    <%= form.button "Create Post", type: "submit", class: "button button-gradient button-secondary", 'data-ripple-light': true %>
+  </div>
+<% end %>

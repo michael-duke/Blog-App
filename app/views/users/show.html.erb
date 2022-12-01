@@ -1,6 +1,6 @@
 <% content_for :title, "#{@user.name}'s - Blog" %>
 <h1>Users#show</h1>
-<section class="flex flex-col w-[55%]">
+<section class="flex flex-col w-[55%] mx-auto">
   <%= render "user", user: @user %>
   <div class="bio border-2 border-blue-gray">
     <h3>Bio<h3>
@@ -13,7 +13,13 @@
     <% end %>
   <% end %>
   
-  <%= link_to user_posts_path(@user), class: 'self-center' do %>
-    <button type="button" class="see-all-posts mt-4 button text-white bg-gradient-to-r from-blue-500 to-blue-200 hover:shadow-none shadow-none border-2 hover:border-blue-400 hover:text-blue-400 hover:from-white hover:to-white">See all posts</button>
-  <% end %>
+  <div class="post-actions flex gap-3">
+    <%= link_to user_posts_path(@user), class: 'self-center' do %>
+      <button type="button" class="see-all-posts mt-4 button text-white bg-gradient-to-r from-blue-500 to-blue-200 hover:shadow-none shadow-none border-2 hover:border-blue-400 hover:text-blue-400 hover:from-white hover:to-white">See all posts</button>
+    <% end %>
+    
+    <%= link_to new_user_post_path(@user) do %>
+      <button type="button" class="create-post mt-4 button text-white bg-gradient-to-r from-green-500 to-green-200 hover:shadow-none shadow-none border-2 hover:border-green-400 hover:text-green-400 hover:from-white hover:to-white">New post</button>
+    <% end %>
+  </div>
 </section>
