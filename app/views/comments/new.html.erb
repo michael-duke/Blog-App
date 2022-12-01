@@ -1,0 +1,10 @@
+<%= render "posts/user_post", post: @post %>
+
+<h2 class="m-3">New Comment</h2>
+<%= form_with model: @comment, url: user_post_comments_path, class: "w-6/12 m-6" do  |form| %>
+  <div class="input-group input-group-dynamic mb-6 bg-blue-gray-50">
+    <label class="form-label">Comment here</label>
+    <%= form.text_area :text, class: "form-control", rows: "5" %>
+  </div>
+  <%= form.button "Add Comment", type: "submit", class: "button button-gradient button-secondary", 'data-ripple-light': true %>
+<% end %>
