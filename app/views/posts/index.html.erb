@@ -1,5 +1,8 @@
 <% content_for :title, "#{@user.name}'s Posts" %>
 <h1>Posts#index</h1>
+<% if flash[:success] %>
+  <div class="notice"><%= flash[:success] %></div>
+<% end %>
 <%= render "users/user", user: @user %>
 <%= render "posts", posts: @posts, user: @user %>
  <%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
