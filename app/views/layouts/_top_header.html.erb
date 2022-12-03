@@ -1,0 +1,50 @@
+<!-- Load Tailwind Play CDN-->
+<%= javascript_include_tag 'https://cdn.tailwindcss.com' %>
+<%= javascript_include_tag 'tailwind.config.js' %>
+
+<!--Load styles for paggy -->
+<style type= 'text/tailwindcss'> 
+  .pagy-nav {
+    @apply flex space-x-3 w-full justify-center my-4;
+  }
+
+  .pagy-nav .page a,
+  .pagy-nav .page.active,
+  .pagy-nav .page.prev.disabled,
+  .pagy-nav .page.next.disabled {
+    @apply block rounded-lg px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+    &:hover{
+      @apply bg-gray-300;
+    }
+    &:active{
+      @apply bg-gray-400 text-white;
+    }
+  }
+
+  .pagy-nav .page.prev.disabled,
+  .pagy-nav .page.next.disabled {
+    @apply text-gray-400 cursor-default;
+    &:hover {
+      @apply text-gray-400 bg-gray-200;
+    }
+    &:active {
+      @apply text-gray-400 bg-gray-200;
+    }
+  }
+
+  .pagy-nav .page.active {
+    @apply text-white cursor-default bg-gray-400;
+    &:hover {
+      @apply text-white bg-gray-400;
+    }
+    &:active {
+      @apply bg-gray-400 text-white;
+    }
+  }
+</style>
+
+<!-- Load Material Tailwind from Creative Tim-->
+<!-- stylesheet -->
+<%= stylesheet_link_tag "https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" %>
+<!-- script -->
+<%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js' %>
