@@ -62,6 +62,7 @@ group :development, :test do
   gem 'rspec-rails'
   # FFI is a required pre-requisite for Windows or posix_spawn support in the ChildProcess gem.
   gem 'ffi'
+  gem 'database_cleaner'
 end
 
 group :development do
