@@ -60,9 +60,10 @@ group :development, :test do
   # Use for testing rails models, controllers
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  # Use database_cleaner for making Capybara testing
+  gem 'database_cleaner'
   # FFI is a required pre-requisite for Windows or posix_spawn support in the ChildProcess gem.
   gem 'ffi'
-  gem 'database_cleaner'
 end
 
 group :development do
