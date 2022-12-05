@@ -9,7 +9,7 @@
 <%= render "likes/add_like"%>
 
 <div class="post-comments mt-4 border-2 border-gray-500">
-  <% @post.comments.each do |comment| %>
+  <% @comments.each do |comment| %>
     <div class="post-comment">
       <p>
         <span><strong><%= comment.author.name %>:</strong></span>
@@ -20,6 +20,6 @@
 </div>
 
 <h2 class="mt-2">Add a Comment</h2>
-<%= button_tag '', class: 'mt-3 button button-text button-blue' do%>
+<%= button_tag nil, class: 'mt-3 button button-text button-blue' do%>
   <%= link_to 'Add Comment', new_user_post_comment_path(@user.id, @post.id) %>
 <% end %>

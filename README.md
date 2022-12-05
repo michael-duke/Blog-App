@@ -129,6 +129,10 @@ To run the project, execute the following command:
 - Twitter: [@MikeDuke21](https://twitter.com/MikeDuke21)
 - LinkedIn: [MICHAEL MESFIN](https://linkedin.com/in/https://www.linkedin.com/in/michael-21-duke/)
 
+👤 **Conor Follette**
+
+- GitHub: [@Amtresu](https://github.com/amtresu)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

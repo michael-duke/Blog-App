@@ -8,7 +8,7 @@
       <span>for Post: </span>
       <span class="text-blue-gray-600 underline decoration-red-400"><%="#{post.title}"%> </span>
       </h3>
-      <% post.recent_five.each do |comment| %>
+      <% post.recent_five.includes([:author]).each do |comment| %>
         <div class="post-comment">
           <p>
             <span><strong><%= comment.author.name %>:</strong></span>
