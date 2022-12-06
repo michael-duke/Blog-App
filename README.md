@@ -106,7 +106,24 @@ Install this project with:
 ```sh
   bundle install
 ```
+```sh
+  npm install
+```
 
+Create Database (Mandatory)
+
+```
+rails db:create
+```
+
+If you have made a migration then run this command
+
+```
+rails db:migrate
+```
+```
+rails db:seed
+```
 ### Usage
 
 To run the project, execute the following command:
@@ -116,6 +133,10 @@ To run the project, execute the following command:
   rails server or rails s
 ``` 
 
+Run tests
+```
+rspec
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
