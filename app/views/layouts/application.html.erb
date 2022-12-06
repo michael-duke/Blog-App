@@ -15,10 +15,15 @@
   <body>
     <%= link_to 'HOME', root_path, class: 'mr-8' %>
     <%= link_to 'BACK', 'javascript:history.back()' %>
+    
+    <% if current_user %>
+      <h2 class="mt-3">Welcome <%= current_user.name %></h2>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "mt-2 button button-gradient text-white bg-gray-500 border hover:text-gray-500 hover:border-gray-500 hover:bg-transparent", 'data-ripple-light': true %>
+    <% end %>
 
     <div class="notice"><%= notice %></div>
     <div class="alert"><%= alert %></div>
-    
+
     <%= yield %>
     <%= render "layouts/bottom_header" %>
   </body>
