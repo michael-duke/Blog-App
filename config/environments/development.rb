@@ -53,12 +53,6 @@ Rails.application.configure do
   # Default URL options for the Devise mailer 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
-  # Delivery method for the Devise mailer
-  config.action_mailer.delivery_method = :letter_opener
-
-  # Allow Devise to perform deliveries
-  config.action_mailer.perform_deliveries = true
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
