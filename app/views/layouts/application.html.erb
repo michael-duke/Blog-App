@@ -15,6 +15,10 @@
   <body>
     <%= link_to 'HOME', root_path, class: 'mr-8' %>
     <%= link_to 'BACK', 'javascript:history.back()' %>
+
+    <div class="notice"><%= notice %></div>
+    <div class="alert"><%= alert %></div>
+    
     <%= yield %>
     <%= render "layouts/bottom_header" %>
   </body>
