@@ -3,11 +3,11 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @post = Post.find(params[:post_id])
   end
-​
+
   def create
     post = Post.find(params[:post_id])
     comment = Comment.create(author: current_user, post:, **comment_params)
-​
+
     if comment.save
       flash[:success] = 'Comment was successfully saved !'
     else
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     end
     redirect_to user_post_url(post.author, post)
   end
-​
+
   def destroy
     user = User.find(params[:user_id])
     post = user.posts.find(params[:post_id])
@@ -27,9 +27,9 @@ class CommentsController < ApplicationController
     end
     redirect_to user_post_path(user, post)
   end
-​
+
   private
-​
+
   def comment_params
     params.require(:comment).permit(:text)
   end
