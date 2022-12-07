@@ -3,11 +3,11 @@
 <% if flash[:success] %>
   <div class="notice"><%= flash[:success] %></div>
 <% end %>
-​
+
 <%= render "user_post", post: @post %>
-​
+
 <%= render "likes/add_like"%>
-​
+
 <div class="post-comments mt-4 border-2 border-gray-500">
   <% @comments.each do |comment| %>
     <div class="post-comment flex items-center gap-8 p-2">
@@ -21,13 +21,13 @@
     </div>
   <% end %>
 </div>
-​
+
 <h2 class="m-3 underline decoration-wavy decoration-blue-400">Add a Comment</h2>
 <%= button_tag nil, class: 'mt-3 button button-text button-blue' do%>
   <%= link_to 'Add Comment', new_user_post_comment_path(@user, @post) %>
 <% end %>
-​
-<h2 class="m-3 underline underline-offset-8 decoration-4 decoration-amber-400">⚠️ Destroy Post</h2>
+
 <% if can? :destroy, @post %>
+  <h2 class="m-3 underline underline-offset-8 decoration-4 decoration-amber-400">⚠️ Destroy Post</h2>
   <%= button_to "Delete Post", user_post_path, method: :delete, class: "m-3 p-1 button-gradient text-lg text-white bg-gray-700 border hover:text-gray-700 hover:border-gray-700 hover:bg-transparent", 'data-ripple-light': true %>
 <% end %>
