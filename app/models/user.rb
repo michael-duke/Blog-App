@@ -10,6 +10,14 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :author_id, dependent: :destroy
   has_many :likes, foreign_key: :author_id, dependent: :destroy
 
+  # User::Roles
+  # The available roles
+  ROLES = %i[admin default].freeze
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+
   def recent_three
     posts.order(created_at: :desc).limit(3)
   end

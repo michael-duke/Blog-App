@@ -13,7 +13,19 @@ class CommentsController < ApplicationController
     else
       flash.now[:error] = 'Error: Comment could not be saved'
     end
-    redirect_to user_post_url(current_user.id, post.id)
+    redirect_to user_post_url(post.author, post)
+  end
+
+  def destroy
+    user = User.find(params[:user_id])
+    post = user.posts.find(params[:post_id])
+    comment = Comment.find(params[:id])
+    if comment.destroy
+      flash[:success] = 'Comment was successfully deleted.'
+    else
+      flash[:error] = 'Error: Comment could not be deleted'
+    end
+    redirect_to user_post_path(user, post)
   end
 
   private
