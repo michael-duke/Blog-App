@@ -1,6 +1,6 @@
 <h2 class="m-3 underline decoration-wavy decoration-red-400">Add a Like</h2>
-<%= form_with model: @like, url: user_post_likes_path(@user.id, @post.id) do |form| %>
-  <div>
-    <%= form.button "Add Like", type: "submit", class: "button button-text button-pink", 'data-ripple-light': true %>
-  </div>
+<% if user_signed_in?  %>
+  <%= button_to "Add Like", user_post_likes_path(@user, @post), class: "button button-text button-pink", 'data-ripple-light': true, method: :post %>
+<% else %>
+  <%= button_to "Add Like", new_user_session_url, class: "bg-red-400", class: "button button-text button-pink", 'data-ripple-light': true, method: :get %>
 <% end %>
