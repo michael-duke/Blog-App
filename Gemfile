@@ -39,6 +39,8 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Use RSwag to generate Swagger documentation
+gem 'rswag'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -66,6 +68,7 @@ group :development, :test do
   # Use for testing rails models, controllers
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'rswag-specs'
   # Use database_cleaner for making Capybara testing
   gem 'database_cleaner'
   # FFI is a required pre-requisite for Windows or posix_spawn support in the ChildProcess gem.
@@ -77,6 +80,8 @@ group :development do
   gem 'web-console'
   # Use bullet to fix N + 1 problems
   gem 'bullet'
+  # Use letter_opener to open emails in the browser
+  gem 'letter_opener'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 

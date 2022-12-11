@@ -69,9 +69,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Create and run necessary migration files]**
-- **[Match table and column names to the ERD diagram.]**
-
+- **[Authentication, Author can manage his posts and comments]**
+- **[Admin can manage all]**
+- **[Guest User can navigate the App and read bu can't create/like a post or make a comment or ]**
+- **[API documentation based on swagger UI]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ER DIAGRAM-->
@@ -85,6 +86,8 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## API Documentation
+![api-docs](https://user-images.githubusercontent.com/84629565/206882182-a37e4ed4-dded-4af9-adc9-4ef5cadc2822.png)
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -137,6 +140,10 @@ Run tests
 ```
 rspec
 ```
+View API documentation
+```
+http://localhost:3000/api-docs/
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,9 +168,10 @@ rspec
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controllers specs]**
-- [ ] **[Processing data in models]**
-- [ ] **[Views]**
+- [ ] **[Improve UI, maybe integrate with esbuild or webpacker]**
+- [ ] **[Re-write Controllers specs]**
+- [ ] **[Re-write Request specs]**
+- [ ] **[Improve Integration Specs for Views]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
