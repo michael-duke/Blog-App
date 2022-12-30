@@ -16,9 +16,15 @@ gem 'pg', '~> 1.1'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use for Devise Authentication
+# https://github.com/heartcombo/devise
 gem 'devise'
 
+# JWT for Devise Authentication for API
+# https://github.com/waiting-for-dev/devise-jwt
+gem 'devise-jwt'
+
 # Use CAnCanCan for Authorization
+# https://github.com/CanCanCommunity/cancancan
 gem 'cancancan'
 
 # Use for hiding credentials
