@@ -2,7 +2,8 @@ class Api::V1::ApplicationController < ActionController::API
   include Response
   include ExceptionHandler
 
-  before_action :restrict_access
+  # before_action :restrict_access
+  before_action :authenticate_user!
   respond_to :json
 
   private
