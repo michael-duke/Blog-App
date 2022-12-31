@@ -15,6 +15,10 @@ gem 'pg', '~> 1.1'
 # Use Rubocop for linters
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use rack-cors for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# https:// github.com/cyu/rack-cors  
+gem 'rack-cors'
+
 # Use for Devise Authentication
 # https://github.com/heartcombo/devise
 gem 'devise'
@@ -83,6 +87,8 @@ group :development do
   gem 'web-console'
   # Use bullet to fix N + 1 problems
   gem 'bullet'
+  # Use letter_opener to open emails in the browser
+  gem 'letter_opener'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
