@@ -16,7 +16,7 @@ gem 'pg', '~> 1.1'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use rack-cors for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# https:// github.com/cyu/rack-cors  
+# https:// github.com/cyu/rack-cors
 gem 'rack-cors'
 
 # Use for Devise Authentication

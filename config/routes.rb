@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
   
   root to: "users#index"
   
@@ -7,6 +7,16 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show, :new, :create, :destroy] do 
       resources :comments, only: [:new, :create, :destroy]
       resources :likes, only: [:create]
+    end
+  end
+
+  scope :api, defaults: { format: :json } do
+    scope :v1 do 
+      devise_for :users, #as: 'api', # <- this is the important part since we already have a devise_for :users for the web app 
+      controllers: { 
+        registrations: 'api/v1/users/registrations', 
+        sessions: 'api/v1/users/sessions' 
+      }
     end
   end
   
