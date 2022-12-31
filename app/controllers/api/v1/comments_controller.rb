@@ -30,7 +30,7 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
   end
 
   def set_post
-    @post = set_author.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
   end
 
   def set_comment
