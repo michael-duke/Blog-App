@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  #devise_for :users # => this is commented out because we are using devise_for :users in the scope :api, defaults: { format: :json } do block below 
+  # => This is commented out because we are using devise_for :users in the scope :api do block below 
+  # => and we cant use the default devise_for :users for the web app and the api at the same time
+  # => because they both use the same routes
+  #devise_for :users 
   
   root to: "users#index"
   
