@@ -96,6 +96,8 @@ group :test do
   gem 'webdrivers'
 end
 
+# Pagy is a modern, powerful, responsive and lightweight pagination 
 gem 'pagy', '~> 5.10'
 
+# Use sassc-rails for sassc
 gem 'sassc-rails', '~> 2.1'
