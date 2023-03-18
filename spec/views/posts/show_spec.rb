@@ -11,7 +11,7 @@ RSpec.describe 'Post Show', type: :feature do
                         text: 'This is ObiWans\' message: Don\'t let the Empire win')
 
     @com1 = Comment.create(author: @author, post: @post, text: 'Thank you for your support 😊')
-    @com2 = Comment.create(author: @author, post: @post, text: 'Hello there Cassian, this Dero I am watching you')
+    @com2 = Comment.create(author: @author, post: @post, text: 'Hello there Cassian, this is Dero I am watching you')
     @com3 = Comment.create(author: @author, post: @post, text: 'Spend the credits wisely :|')
 
     @like1 = @post.likes.create!(author: @author)
