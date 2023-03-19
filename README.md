@@ -208,9 +208,14 @@ I would like to thank:
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[Question_1d]**
+- **[How to run tests?]**  
 
-  - [Answer_1]
+  - [You can run tests with the following command:]
+
+  ```sh 
+  rspec
+  ```
+
 
 - **[Question_2]**
 
