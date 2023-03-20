@@ -213,7 +213,7 @@ I would like to thank:
   - [You can run tests with the following command:]
 
   ```sh 
-  rspec
+  rspec or bundle exec rspec
   ```
 
 
