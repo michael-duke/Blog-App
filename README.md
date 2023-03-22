@@ -199,6 +199,7 @@ Give a ⭐️ if you like this project!
 
 I would like to thank:
 - [Microverse](microverse.org)
+- Coding Partners
 - Code Reviewers
 - [Vitor Guedes Madeira](https://github.com/VitorGuedesMadeira)
 
