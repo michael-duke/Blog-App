@@ -170,7 +170,7 @@ http://localhost:3000/api-docs/
 
 - [ ] **[Improve UI, maybe integrate with esbuild or webpacker]**
 - [ ] **[Re-write Controllers specs]**
-- [ ] **[Re-write Request specs]**
+- [ ] **[Improve Request specs]**
 - [ ] **[Improve Integration Specs for Views]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
