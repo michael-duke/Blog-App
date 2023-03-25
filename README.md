@@ -169,7 +169,7 @@ http://localhost:3000/api-docs/
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Improve UI, maybe integrate with esbuild or webpacker]**
-- [ ] **[Re-write Controllers specs]**
+- [ ] **[Re-write Controller specs]**
 - [ ] **[Improve Request specs]**
 - [ ] **[Improve Integration Specs for Views]**
 
